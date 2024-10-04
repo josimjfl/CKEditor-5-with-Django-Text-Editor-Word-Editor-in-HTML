@@ -1,8 +1,9 @@
 # CKEditor 5 Integration in Django
 
+#### wwww.facebook.com/jflitlab
 
+![Screenshot 2024-10-04 180915](https://github.com/user-attachments/assets/e7737f34-9fda-4a05-ae0d-38a5a3449ad9)
 
-![Screenshot 2024-10-04 180915](https://github.com/user-attachments/assets/acf27088-3f5e-4784-a6c3-2897df664177)
 
 This guide will help you integrate CKEditor 5 into your Django project, customize it with plugins like `lineHeight`, `fontSize`, and configure toolbar options.
 
