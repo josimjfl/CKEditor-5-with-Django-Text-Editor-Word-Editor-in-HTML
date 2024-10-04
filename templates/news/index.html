@@ -1,0 +1,56 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josim JFL CKEditor 5 Integration</title>
+    
+    <!-- CKEditor 5 static files -->
+    {{ form.media }} <!-- Required for CKEditor5 styling/js -->
+
+    <style>
+        .main-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        a {
+        	text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+    	<div style="text-align: center;">
+         <h1>CKEditor 5 with Django</h1>
+	     <h2>By Josim Uddin as JFL IT Lab</h2>
+	     <p><a href="www.facebook.com/jflitlab.com">JFL IT Lab</a></p>
+	     <p>more detais contact with: <a href="https://facebook.com/jflitlab"><button>JFLITLab</button></a></p>
+	 </div>
+        <!-- Form to submit comments or articles -->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+
+    <!-- Display articles (optional) -->
+        <div>
+            {% for article in obj %}
+          		<hr>
+                <h2>{{ article.title }}</h2>
+                <div>{{ article.text|safe }}</div>
+            {% endfor %}
+        </div>
+        <a href="https://pypi.org/project/django-ckeditor-5/">Tutorial Documentations</a>
+        more detais contact with: <a href="https://facebook.com/jflitlab">JFLITLab</a>
+
+
+    </div>
+</body>
+</html>
+
+
